@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>cjk home</title>
+<title>cjk|home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -117,13 +117,13 @@ body {
 
 <div class="header">
   <h1>cjk</h1>
-  <p>commie pinko bedwetter</p>
+  <p>work in progress</p>
 </div>
 
 <div class="navbar">
   <a href="#">: about</a>
   <a href="#">: sounds</a>
-  <a href="#">: research</a>
+  <a href="#">: blog</a>
   <a href="#">: contact</a>
 </div>
 
@@ -131,9 +131,11 @@ body {
   <div class="main">
     <h2>about charlie</h2>    
     <h4>hi!</h4>
-    <p>i write songs as <b>kozey</b> and post my originals and covers on <b>youtube</b>.</p>
-   	<p>i just released an ep called <b>loved ones</b>&mdash;check it out!</p>
-    <p>i produce electronic music as <b>vabriel</b> and hang out with <b>the kaizen club</b> sometimes.</p> 
+    <p>i write songs as <b>kozey</b> and post my originals and covers on <b>youtube</b>.<br>
+   	i'm currently recording <b><i>loved ones ep</i></b>, a small collection of songs i wrote in 2015-2016.</p>
+    <p>i make electronic music as <b>vabriel</b> and hang out with <b>the kaizen club</b> sometimes.</p> 
+    <p>i'm part of <b>consensus ensemble</b>, where we listen to one another and make sounds together.<br>
+	we just made an album! it's called <b><i>song cycling</i></b>&mdash;available on bandcamp soon.</p> 
     <p>i'm writing a dissertation on the relationship between <b>voice and identity</b>. you can explore my thoughts-in-progress <b>here</b>.</p>
 
   </div>
@@ -142,7 +144,7 @@ body {
 </div>
 
 <div class="footer">
-  made by charlie jane kozey<br>with gratitude to w3schools.com<br>and all who share knowledge freely
+  made by charlie jane kozey<br>with gratitude to you<br>and to all who share knowledge freely
 </div>
 
 </body>
