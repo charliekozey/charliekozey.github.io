@@ -58,7 +58,11 @@ a:hover {
 a:active {
   background-color: #333;
   font-weight: bolder;
-  color: #00bfff;
+  color: #ffee00;
+}
+
+a:visited {
+  color: #ffee00;
 }
 
 .navbar a:hover {
