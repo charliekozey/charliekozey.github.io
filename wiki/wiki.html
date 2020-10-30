@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>thinking alongside — on voice and identity</title>
+<title>thinking alongside — will this work?</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -9578,8 +9578,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20201030204023761" modified="20201030214553917" title="$:/SiteSubtitle">
-<pre>on voice and identity</pre>
+<div created="20201030204023761" modified="20201030204025293" title="$:/SiteSubtitle">
+<pre>will this work?</pre>
 </div>
 <div created="20201030204011303" modified="20201030204021442" title="$:/SiteTitle">
 <pre>thinking alongside</pre>
@@ -11088,7 +11088,7 @@ $tw.Wiki = function(options) {
 				var index = tiddlerTitles.indexOf(title);
 				if(index !== -1) {
 					tiddlerTitles.splice(index,1);
-				}				
+				}
 			}
 			// Record the new tiddler state
 			updateDescriptor["new"] = {
@@ -11235,7 +11235,7 @@ $tw.Wiki = function(options) {
 				}
 			} else {
 				if(pluginInfo[title]) {
-					delete pluginInfo[title];					
+					delete pluginInfo[title];
 					results.deletedPlugins.push(title);
 				}
 			}
@@ -12114,7 +12114,7 @@ $tw.loadTiddlersNode = function() {
 				type = parts[0];
 			if(parts.length  === 3 && ["plugins","themes","languages"].indexOf(type) !== -1) {
 				$tw.loadPlugins([parts[1] + "/" + parts[2]],$tw.config[type + "Path"],$tw.config[type + "EnvVar"]);
-			}			
+			}
 		}
 	});
 	// Load the tiddlers from the wiki directory
