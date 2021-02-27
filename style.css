@@ -8,16 +8,16 @@ font-family: "verdana", sans-serif;
 font-size: 20px;
 line-height: 1.5;
 margin: 0;
-color: #ffffff;
-background-color: #262626;
+color: #e5e5e5;
+background-color: #1c1d1a;
 }
 
 .header {
 
 padding: 0px 30px 0px 30px;
 text-align: left;
-background: #262626;
-color: #ffffff;
+background: #1c1d1a;
+color: #e5e5e5;
 }
 
 .header h1 {
@@ -37,14 +37,14 @@ font-size: 18px;
 
 .navbar {
 overflow: hidden;
-background-color: #262626;
+background-color: #1c1d1a;
 padding: 0px 20px 0px 30px;
 }
 
 .navbar a {
 float: left;
 display: block;
-color: #33cccc;
+color: #7ca7fd;
 text-align: left;
 padding: 0px 20px 0px 0px;
 text-decoration: none;
@@ -55,26 +55,34 @@ float: right;
 }
 
 a:link {
-color: #33cccc;
-}
-
-a:hover {
-  background-color: #262626;
-  color: #33cccc;
-}
-
-a:active {
-  background-color: #262626;
-  color: #33cccc;
+  color: #7ca7fd;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #29a3a3;
+  color: #7ca7fd;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #7ca7fd;
+  color: #dae4ff;
+  text-decoration: none;
+
+}
+
+a:active {
+  background-color: #1c1d1a;
+  color: #7ca7fd;
+  text-decoration: none;
+
 }
 
 .navbar a:hover {
-background-color: #262626;
-color: #33cccc;
+  background-color: #1c1d1a;
+  color: #dae4ff;
+  text-decoration: none;
+
 }
 
 /* Column container */
@@ -90,7 +98,7 @@ flex-wrap: wrap;
 .main {
 -ms-flex: 60%; /* IE10 */
 flex: 60%;
-background-color: #262626;
+background-color: #1c1d1a;
 padding: 10px 30px 10px 30px;
 line-height: 1.6;
 }
@@ -99,7 +107,7 @@ line-height: 1.6;
 .side {
 -ms-flex: 40%; /* IE10 */
 flex: 40%;
-background-color: #262626;
+background-color: #1c1d1a;
 padding: 0px;
 }
 
@@ -107,7 +115,7 @@ padding: 0px;
 .footer {
 padding: 30px;
 text-align: right;
-background: #262626;
+background: #1c1d1a;
 color: #808080;
 line-height: 1.4;
 font-size: 11;
