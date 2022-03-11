@@ -6,295 +6,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<link rel="stylesheet" href="/style.css">
 
-
-<style type="text/css">
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote {
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    color: #fff;
-    background-color: #282a36;
-    margin: 10px 13px 10px 13px;
-}
-table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
-}
-td,th {
-	border: 1px solid #ddd;
-	padding: 3px 10px;
-}
-th {
-	padding: 5px 10px;
-}
-a {
-    color: #59acf3;
-}
-a:hover {
-    color: #a7d8ff;
-    text-decoration: none;
-}
-a img {
-    border: none;
-}
-p {
-    margin-bottom: 9px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #fff;
-    line-height: 36px;
-}
-h1 {
-    margin-bottom: 18px;
-    font-size: 30px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-    font-size: 18px;
-}
-h4 {
-    font-size: 16px;
-}
-h5 {
-    font-size: 14px;
-}
-h6 {
-    font-size: 13px;
-}
-hr {
-    margin: 0 0 19px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-}
-blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
-}
-blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
-}
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
-}
-code, pre {
-    font-family: Monaco, Andale Mono, Courier New, monospace;
-}
-code {
-	color: #ff4a14;
-    padding: 1px 3px;
-    font-size: 12px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-pre {
-    display: block;
-    padding: 14px;
-    margin: 0 0 18px;
-    line-height: 16px;
-    font-size: 11px;
-    border: 1px solid #bf370f;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-pre code {
-    background-color: #282a36;
-    color: #ff4a14;
-    font-size: 11px;
-    padding: 0;
-}
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
-* {
-	-webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:10px auto;
-    }
-}
-@media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-  body {
-    margin: 2cm; 
-  }
-}
-</style>
-
-<style type="text/css">
-/**
- * prism.js Funky theme
- * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
- * @author Lea Verou
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: .4em .8em;
-	margin: .5em 0;
-	overflow: auto;
-	background: url('data:image/svg+xml;charset=utf-8,<svg%20version%3D"1.1"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"100"%20height%3D"100"%20fill%3D"rgba(0%2C0%2C0%2C.2)">%0D%0A<polygon%20points%3D"0%2C50%2050%2C0%200%2C0"%20%2F>%0D%0A<polygon%20points%3D"0%2C100%2050%2C100%20100%2C50%20100%2C0"%20%2F>%0D%0A<%2Fsvg>');
-	background-size: 1em 1em;
-}
-
-code[class*="language-"] {
-	background: black;
-	color: white;
-	box-shadow: -.3em 0 0 .3em black, .3em 0 0 .3em black;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .2em;
-	border-radius: .3em;
-	box-shadow: none;
-	white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #aaa;
-}
-
-.token.punctuation {
-	color: #999;
-}
-
-.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol {
-	color: #0cf;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin {
-	color: yellow;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.toke.variable,
-.token.inserted {
-	color: yellowgreen;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	color: deeppink;
-}
-
-.token.regex,
-.token.important {
-	color: orange;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-
-.token.deleted {
-	color: red;
-}
-</style>
-
+<title>
+    cjk | blog
+</title>
 
 </head>
 
 <body>
 
-<h1 id="toc_0">Git your life together: a git troubleshooting flowchart</h1>
+<div class="header">
+    <h1>charlie kozey</h1>
+</div>
+<div class="row">
+<div class="navbar">
+    <a href="/index.html">>> about</a>
+    <a href="/music/index.html">>> music</a>
+    <a href="../index.html">>> blog</a>
+    <a href="/cosmicpellets/index.html">>> cosmic pellets</a>
+    <a href="/contact/index.html">>> contact</a>
+</div>
+
+<div class="main">
+
+
+<h2 id="toc_0">Git your life together: a git troubleshooting flowchart</h2>
 
 <p>Git is a tool that makes it easier to collaborate with others on a software project in a decentralized way. When you first start using it, though, it can feel like the process is anything but easy.</p>
 
@@ -304,34 +41,29 @@ code[class*="language-"] {
 
 <p>I&#39;m still in the process of learning these things, so this explainer is also a way of helping me remember and share what I&#39;ve learned recently. If you have a correction or a better way of explaining something, please let me know!</p>
 
-<h1 id="toc_1">Some things to remember before we begin</h1>
+<h3 id="toc_1">Some tips to remember</h3>
 
-<h3 id="toc_2">Do not be afraid</h3>
+<h4 id="toc_2">Do not be afraid</h4>
 
 <p>Working with git in the terminal can sometimes feel like fumbling around in the dark, and it can be intimidating to make changes to a project for fear of deleting something important. But don&#39;t be afraid to try things out! Remember that the point of git is to maintain a record of all the significant changes made to a project and all the versions created along the way. If you break something, it&#39;s very unlikely to be catastrophic. You and/or your team can always revert to a prior, not-broken version. </p>
 
-<h3 id="toc_3"><code>git status</code> is your friend</h3>
+<h4 id="toc_3"><code>git status</code> is your friend</h4>
 
 <p>I&#39;ve sometimes found myself wrestling with git commands only to realize I was completely lost—maybe I didn&#39;t know what exactly I should be modifying, or didn&#39;t know whether I was intending to push or pull (or, in some particularly tragic cases, both). So the first thing to do is figure out which way is up.</p>
 
 <p>When you&#39;re unsure of what to do next, you can always enter  <code>git status</code> to orient yourself. </p>
 
-<div><pre><code class="language-none">$ git status 
-</code></pre></div>
+<p>This will tell you what branch you&#39;re currently on and which files, if any, have changed since the last commit</p>
 
-<p>This will tell you:
--  what branch you&#39;re currently on
--  which documents, if any, have changed since last commit</p>
+<h4 id="toc_4">Error messages are also your friends</h4>
 
-<h3 id="toc_4">Error messages are also your friends</h3>
+<p>It's frustrating to type a git command into the terminal only to be be met with a block of red and/or yellow text. But git is actually pretty good about giving error messages that describe what to do next. The trouble is understanding what the messages mean. Hopefully, you&#39;ll be able to find something helpful in the explanations and resources below. When in doubt, ask someone to help you understand, or do an internet search as specifically as you can (for example, &quot;what does git fast-forward do when trying to git pull&quot;).</p>
 
-<p>It can be intimidating to type a git command into the terminal only to be be met with a block of red and/or yellow text. But git is actually pretty good about giving error messages that describe what to do next. The trouble is understanding what the messages mean. Hopefully, you&#39;ll be able to find something helpful in the explanations and resources below. When in doubt, ask someone to help you understand, or do an internet search as specifically as you can (for example, &quot;what does git fast-forward do when trying to git pull&quot;).</p>
-
-<h3 id="toc_5">Your teammates are your friends</h3>
+<h4 id="toc_5">Your teammates are your friends</h4>
 
 <p>Communicate with your teammates; find out what the most recent updates should be and what your project looks like on their end. Use GitHub&#39;s website (or wherever your repository is hosted) to help you understand and confirm changes that have been made and saved at the origin.</p>
 
-<h1 id="toc_6">Halp! Streamlined git troubleshooting</h1>
+<h3 id="toc_6">Halp! Streamlined git troubleshooting</h3>
 
 <p>Choose your own git adventure! Each top-level question has multiple answers—choose what fits your situation and follow the outline down to the next level.</p>
 
@@ -396,17 +128,17 @@ code[class*="language-"] {
 </ul></li>
 </ul>
 
-<h1 id="toc_7">Some git concepts explained</h1>
+<h3 id="toc_7">Some git concepts explained</h3>
 
 <p>If you have the time, this section is meant to be a relatively brief explainer for some of the steps given above. Here, I aim to provide some context that will help you build a mental model of what each of the commands is doing. There isn&#39;t really one perfect way to explain every aspect of git without using abstract diagrams that may be confusing in themselves (but if abstract diagrams are your thing, <a href="https://web.archive.org/save/https://developer.ibm.com/tutorials/d-learn-workings-git/">this explainer from IBM</a> is succinct and clear).</p>
 
 <p>Since everybody learns differently, I&#39;m offering a sampler of metaphors (trees, rivers, parallel universes, and software you may already be familiar with) in the hope that one or more of them help illuminate some aspect of git for you.</p>
 
-<h2 id="toc_8">Local and origin</h2>
+<h4 id="toc_8">Local and origin</h4>
 
 <p>A key thing to understand in git is the difference between local and origin. Essentially, there are many copies of a project when you&#39;re collaborating on it: one located at <code>origin</code> (which is GitHub or wherever you&#39;re remotely hosting the project) and one for each of the collaborators. The version of the project that exists on your computer is the local one.</p>
 
-<h2 id="toc_9">Fork vs. branch vs. clone</h2>
+<h4 id="toc_9">Fork vs. branch vs. clone</h4>
 
 <p>Something that might be a little confusing at first is the difference between forking and creating a branch. After all, a tine on a fork resembles a tree branch in that they&#39;re both smaller appendages coming off of a larger body. But perhaps a better way to think about it is a fork in the road, or two roads diverging in a wood: once you choose one, whatever happens on your road is unrelated to whatever happens on the other.</p>
 
@@ -416,24 +148,23 @@ code[class*="language-"] {
 
 <p>But git clone is something a little different—that means taking a copy of a project from <code>origin</code> and making it exist on your computer. That is, creating a local version.</p>
 
-<h2 id="toc_10"><code>main</code> and other branches</h2>
+<h4 id="toc_10"><code>main</code> and other branches</h4>
 
 <p>There are lots of ways to organize a git project, but here&#39;s one that&#39;s generally safe and easy to understand: Generally, you don&#39;t want to be pushing to main; instead, you want each collaborator to be working on an individual branch that later gets merged into main.</p>
 
-<h3 id="toc_11">Branches are like Save As</h3>
+<h4 id="toc_11">Branches are like Save As</h4>
 
 <p>Writing for Hackernoon, <a href="https://web.archive.org/web/20220310152918/https://hackernoon.com/understanding-git-fcffd87c15a3">Kevin Cooper gives an apt analogy for creating a branch</a>—it&#39;s like clicking <strong><em>Save As</em></strong> while working on a document. It makes sense: it&#39;s basically like creating a checkpoint.  Say you&#39;ve written a paper, called &quot;Paper.docx,&quot; and now you want to make some changes to your argument in the second section, but you&#39;re not sure how it will turn out. You click <strong><em>Save As</em></strong> and save it as &quot;Paper-section-2-edits.docx&quot; or maybe &quot;Paper-<em>today&#39;s-date</em>.docx.&quot; Now, you&#39;re free to cut and paste as haphazardly as you&#39;d like, because you can always return to Paper.docx to find your pre-edit version again.</p>
 
-<h3 id="toc_12">Commits are like Save</h3>
+<h4 id="toc_12">Commits are like Save</h4>
 
 <p>Continuing with the &quot;git branches=Save As&quot; analogy, you can think of making a git commit as clicking <strong><em>Save</em></strong>. It doesn&#39;t create a whole new document for you to work on, but it represents a checkpoint you can return to, even if you close out your application and return to it later. Even better, git keeps a record of your commits—and forces you to write at least a brief message describing what you changed—so you and your collaborators can understand the steps you took in the process of building your project (it&#39;s amazing how quickly you forget even what you&#39;ve done yourself!). You can also view previous commits and roll back to any of them if necessary. This is kind of like the <strong><em>Version History</em></strong> feature in Google Docs.</p>
 
+</div>
 
-
-<script type="text/javascript">
-var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
-</script>
-
+<div class="side">
+</div>
+</div>
 
 </body>
 

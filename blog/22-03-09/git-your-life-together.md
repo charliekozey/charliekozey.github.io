@@ -1,3 +1,5 @@
+https://girliemac.com/blog/2017/12/26/git-purr/ (add this)
+
 # Git your life together: a git troubleshooting flowchart
 
 Git is a tool that makes it easier to collaborate with others on a software project in a decentralized way. When you first start using it, though, it can feel like the process is anything but easy.
