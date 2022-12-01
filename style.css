@@ -43,6 +43,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1.5em 0em;
 }
 
 h1 {
@@ -57,6 +58,7 @@ h1 {
 
 .navbar a {
   margin-right: 0.5em;
+  width: fit-content;
 }
 
 a:link {
@@ -94,6 +96,11 @@ a:active {
   min-width: 280px;
 }
 
+.skill-icon {
+  margin-right: 0.2em;
+  font-size: 2em;
+}
+
 .main {
   -ms-flex: 66%; /* IE10 */
   flex: 66%;
@@ -114,17 +121,18 @@ a:active {
     align-items: flex-start;
   }
 
-  .navbar {
-    /* display: grid; */
-  }
-
-  .navbar a {
-    width: fit-content;
-  }
-
   #img-box {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .navbar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
   }
 }
