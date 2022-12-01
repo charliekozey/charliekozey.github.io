@@ -1,10 +1,10 @@
 :root {
-  --code-color: lime;
   --text-color: white;
   --link-color: #ffc93c;
   --hover-color: black;
   --hover-bg-color: white;
   --background-color: black;
+  --code-color: lime;
 }
 
 @font-face {
@@ -19,13 +19,15 @@
 }
 
 body {
-  font-family: 'AtkinsonHyperlegible', 'Verdana', sans-serif;
-  padding: 0px 100px 0px 50px;
+  font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
+  padding: 0px 50px 0px 50px;
   font-size: 1.5em;
   line-height: 1.4em;
   margin: 0;
   color: var(--text-color);
   background-color: var(--background-color);
+  /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
+  color: var(--text-color);
 }
 
 code {
@@ -37,44 +39,24 @@ code {
   }
 
 .header {
-  max-width: 900px;
+  max-width: 2400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--text-color);
 }
 
-.header h1 {
+h1 {
   font-size: 1.5em;
   color: var(--text-color);
 }
 
 .navbar {
   display: flex;
+  justify-items: space-between;
 }
 
 .navbar a {
   margin-right: 0.5em;
-}
-
-.main h2 {
-  color: #2b4450;
-  /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
-}
-
-.main h3 {
-  color: var(--text-color);
-  background-color: #B5F18D;
-}
-
-.main h4 {
-  color: var(--text-color);
-  background-color: #C5F783;
-}
-
-.main h5 {
-  color: var(--text-color);
-  background-color: #d4fc79;
 }
 
 a:link {
@@ -112,7 +94,6 @@ a:active {
   min-width: 280px;
 }
 
-/* Main column */
 .main {
   -ms-flex: 66%; /* IE10 */
   flex: 66%;
@@ -120,13 +101,6 @@ a:active {
   max-width: 690px;
 }
 
-/* Whitespace/right column */
-.side {
-  -ms-flex: 40%; /* IE10 */
-  flex: 20%;
-}
-
-/* Footer */
 .footer {
   padding: 30px;
   text-align: right;
@@ -134,15 +108,14 @@ a:active {
   line-height: 1.4;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .navbar {
-    flex-direction: column;
+    /* display: grid; */
   }
 
   .navbar a {
