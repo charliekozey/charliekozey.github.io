@@ -136,6 +136,22 @@ a:active {
     align-items: flex-start;
   }
 
+  .body-container {
+    flex-wrap: wrap;
+  }
+
+  .subnav {
+    width: 100%;
+  }
+  
+  .main {
+    width: 80%;
+  }
+
+  .tag-bar {
+    width: 20%;
+  }
+
   #img-box {
     display: flex;
     align-items: center;
@@ -143,11 +159,24 @@ a:active {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
 
   .navbar {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     justify-items: center;
   }
+
+  .body-container {
+    flex-direction: column;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .tag-bar {
+    width: 100%;
+  }
+
 }
