@@ -28,7 +28,7 @@ body {
   background-color: var(--background-color);
   /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
   color: var(--text-color);
-  max-width: 1700px;
+  max-width: 1600px;
 }
 
 code {
@@ -41,7 +41,6 @@ code {
   
 h1 {
   font-size: 1.5em;
-  color: var(--text-color);
 }
 
 .header {
@@ -107,13 +106,13 @@ a:active {
 }
 
 .subnav {
-  background-color: palevioletred;
+  /* background-color: palevioletred; */
   width: 20%;
 }
 
 .main {
   width: 60%;
-  background-color: #ffc93c;
+  /* background-color: #ffc93c; */
 }
 
 .tag-bar {
@@ -125,9 +124,13 @@ a:active {
 .footer {
   padding: 30px;
   text-align: right;
-  color: #808080;
-  line-height: 1.4;
-  background-color: palegreen;
+  color: #a1a1a1;
+  line-height: 1em;
+  /* background-color: palegreen; */
+}
+
+#home-main {
+  width: 100%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -177,6 +180,7 @@ a:active {
 
   .tag-bar {
     width: 100%;
+    text-align: left;
   }
 
 }
