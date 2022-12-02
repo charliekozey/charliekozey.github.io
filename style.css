@@ -1,9 +1,9 @@
 :root {
   --text-color: white;
-  --link-color: #ffc93c;
-  --hover-color: black;
-  --hover-bg-color: white;
   --background-color: black;
+  --link-color: #ffc93c;
+  --hover-color: var(--background-color);
+  --hover-bg-color: var(--text-color);
   --code-color: lime;
 }
 
@@ -14,14 +14,10 @@
   font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 0 2em;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1.4em;
   margin: 0;
   color: var(--text-color);
@@ -117,7 +113,7 @@ a:active {
 
 .tag-bar {
   width: 20%;
-  background-color: aqua;
+  /* background-color: aqua; */
   text-align: right;
 }
 
