@@ -58,7 +58,7 @@ h1 {
 
 .navbar a {
   margin-right: 0.5em;
-  width: fit-content;
+  min-width: fit-content;
 }
 
 a:link {
