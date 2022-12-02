@@ -17,8 +17,8 @@
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 0 2em;
-  font-size: 1.8em;
-  line-height: 1.4em;
+  font-size: 18pt;
+  /* line-height: 1em; */
   margin: 0;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -36,7 +36,8 @@ code {
   }
   
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
+  line-height: 1em;
 }
 
 .header {
@@ -72,6 +73,7 @@ a:active {
 .navbar {
   display: flex;
   justify-items: space-between;
+  font-size: 1.2em;
 }
 
 .navbar a {
@@ -94,7 +96,7 @@ a:active {
 
 .skill-icon {
   margin-right: 0.2em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .body-container {
@@ -104,6 +106,7 @@ a:active {
 .subnav {
   /* background-color: palevioletred; */
   width: 20%;
+  font-size: 1.2em;
 }
 
 .main {
@@ -118,9 +121,8 @@ a:active {
 }
 
 .footer {
-  padding: 30px;
   text-align: right;
-  color: #a1a1a1;
+  color: #878787;
   line-height: 1em;
   /* background-color: palegreen; */
 }
@@ -139,8 +141,13 @@ a:active {
     flex-wrap: wrap;
   }
 
+  .navbar{
+    margin: 1em 0;
+  }
+
   .subnav {
     width: 100%;
+    margin-bottom: 0.5em;
   }
   
   .main {
@@ -161,9 +168,12 @@ a:active {
 @media screen and (max-width: 850px) {
 
   .navbar {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
+    flex-direction: column;
+    margin: 1em 0;
+  }
+
+  .subnav {
+    margin-bottom: 0.5em;
   }
 
   .body-container {
