@@ -40,6 +40,18 @@ h1 {
   line-height: 1em;
 }
 
+p {
+  margin-top: 0em;
+}
+
+h4 {
+  margin-top: 0em;
+}
+
+h2 {
+  margin-top: 0em;
+}
+
 .header {
   max-width: 2400px;
   display: flex;
@@ -96,7 +108,7 @@ a:active {
 
 .skill-icon {
   margin-right: 0.2em;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .body-container {
@@ -124,6 +136,7 @@ a:active {
   text-align: right;
   color: #878787;
   line-height: 1em;
+  margin-top: 2em;
   /* background-color: palegreen; */
 }
 
@@ -147,7 +160,7 @@ a:active {
 
   .subnav {
     width: 100%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
   }
   
   .main {
@@ -173,7 +186,7 @@ a:active {
   }
 
   .subnav {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
   }
 
   .body-container {
