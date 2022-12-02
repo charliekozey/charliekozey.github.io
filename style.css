@@ -20,7 +20,7 @@
 
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
-  padding: 0px 50px 0px 50px;
+  padding: 0 2em;
   font-size: 1.5em;
   line-height: 1.4em;
   margin: 0;
@@ -28,6 +28,7 @@ body {
   background-color: var(--background-color);
   /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
   color: var(--text-color);
+  max-width: 1700px;
 }
 
 code {
@@ -37,6 +38,11 @@ code {
   color: var(--code-color);
   padding: 1px;
   }
+  
+h1 {
+  font-size: 1.5em;
+  color: var(--text-color);
+}
 
 .header {
   max-width: 2400px;
@@ -44,21 +50,6 @@ code {
   justify-content: space-between;
   align-items: center;
   margin: 1.5em 0em;
-}
-
-h1 {
-  font-size: 1.5em;
-  color: var(--text-color);
-}
-
-.navbar {
-  display: flex;
-  justify-items: space-between;
-}
-
-.navbar a {
-  margin-right: 0.5em;
-  min-width: fit-content;
 }
 
 a:link {
@@ -83,6 +74,16 @@ a:active {
   text-decoration: none;
 }
 
+.navbar {
+  display: flex;
+  justify-items: space-between;
+}
+
+.navbar a {
+  margin-right: 0.5em;
+  min-width: fit-content;
+}
+
 .post-date {
   text-align: right;
   padding: 0px 0px 0px 10px;
@@ -101,11 +102,24 @@ a:active {
   font-size: 2em;
 }
 
+.body-container {
+  display: flex;
+}
+
+.subnav {
+  background-color: palevioletred;
+  width: 20%;
+}
+
 .main {
-  -ms-flex: 66%; /* IE10 */
-  flex: 66%;
-  width: 110%;
-  max-width: 690px;
+  width: 60%;
+  background-color: #ffc93c;
+}
+
+.tag-bar {
+  width: 20%;
+  background-color: aqua;
+  text-align: right;
 }
 
 .footer {
@@ -113,6 +127,7 @@ a:active {
   text-align: right;
   color: #808080;
   line-height: 1.4;
+  background-color: palegreen;
 }
 
 @media screen and (max-width: 1100px) {
