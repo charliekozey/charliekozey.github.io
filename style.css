@@ -1,3 +1,5 @@
+/* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
+
 :root {
   --text-color: white;
   --background-color: black;
@@ -18,11 +20,9 @@ body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 0 2em;
   font-size: 18pt;
-  /* line-height: 1em; */
-  margin: 0;
+  margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
-  /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
   color: var(--text-color);
   max-width: 1600px;
 }
@@ -38,9 +38,18 @@ code {
 h1 {
   font-size: 2em;
   line-height: 1em;
+  margin: 0em;
 }
 
 p {
+  margin: 0em 0em 0.5em 0em;
+}
+
+h2 {
+  margin: 0em 0em 0.5em 0em;
+}
+
+h3 {
   margin-top: 0em;
 }
 
@@ -48,8 +57,16 @@ h4 {
   margin-top: 0em;
 }
 
-h2 {
+ul {
+  list-style: none;
+  padding: 0em;
   margin-top: 0em;
+}
+
+ul li:before
+{
+  content: '\27F6';
+  margin: 0 0.2em 0 0;
 }
 
 .header {
@@ -57,12 +74,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5em 0em;
+  margin: 1.5em 0em 2em 0em;
 }
 
 a:link {
   color: var(--link-color);
   text-decoration: none;
+  width: fit-content;
 }
 
 a:visited {
@@ -90,7 +108,6 @@ a:active {
 
 .navbar a {
   margin-right: 0.5em;
-  min-width: fit-content;
 }
 
 .post-date {
@@ -108,7 +125,7 @@ a:active {
 
 .skill-icon {
   margin-right: 0.2em;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .body-container {
@@ -136,7 +153,7 @@ a:active {
   text-align: right;
   color: #878787;
   line-height: 1em;
-  margin-top: 2em;
+  margin-top: 1em;
   /* background-color: palegreen; */
 }
 
@@ -155,7 +172,7 @@ a:active {
   }
 
   .navbar{
-    margin: 1em 0;
+    margin: 1em 0em 0em 0em;
   }
 
   .subnav {
@@ -180,9 +197,11 @@ a:active {
 
 @media screen and (max-width: 850px) {
 
+  body {}
+
   .navbar {
     flex-direction: column;
-    margin: 1em 0;
+    margin: 1.5em 0em 0em 0em;
   }
 
   .subnav {
@@ -201,5 +220,4 @@ a:active {
     width: 100%;
     text-align: left;
   }
-
 }
