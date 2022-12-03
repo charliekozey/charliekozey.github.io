@@ -1,5 +1,6 @@
 const postBoxes = document.getElementsByClassName("post-box")
-let tagArray = []
+let allTags = []
+let clickedTag
 
 for (postBox of postBoxes) {
     appendTagsToBarAndPost(postBox)
@@ -22,12 +23,28 @@ function appendTagsToBarAndPost(postBox) {
         postTag.textContent = tagText
         postTag.className = "tag"
         
-        if (!tagArray.includes(tagText)) {
-            tagArray.push(tagText)
+        if (!allTags.includes(tagText)) {
+            allTags.push(tagText)
             tagBar.append(barTag)
         }
         
         postTagDiv.append(postTag)
+        barTag.addEventListener("click", e => {
+            clickedTag = tagText
+            filterByTag(individualTags, tagText)
+        })
     })
+}
+
+function filterByTag(individualTags, tagText) {
+    console.log(individualTags)
+    // for (postBox of postBoxes) {
+    //     if (tagArray.includes(tagText)) {
+    //         console.log(postBox)
+    //     }
+
+    //     postBox.style.display = "none"
+    // }
+
 }
 
