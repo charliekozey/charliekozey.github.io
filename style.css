@@ -111,16 +111,29 @@ a:active {
 }
 
 .post-date {
-  text-align: right;
-  padding: 0px 0px 0px 10px;
+  text-align: left;
+  padding: 0.2em 0em 0em 1.5em;
+  color: #878787;
+  font-size: 0.8em;
+  align-items: top;
 }
 
-.post-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0px;
-  width: 100%;
-  min-width: 280px;
+.post-title {
+  text-align: right;
+  align-items: bottom;
+  margin-bottom: 0.4em;
+}
+
+.post-box {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.post-tags {
+  text-align: left;
+  padding-left: 1.5em;
+  font-size: 0.8em;
+  align-items: top;
 }
 
 .skill-icon {
@@ -159,6 +172,24 @@ a:active {
 
 #home-main {
   width: 100%;
+}
+
+.tag {
+  margin-right: 0.4em;
+  font-size: 0.8em;
+  padding: 0em 0.2em;
+}
+
+#tag1 {
+  background-color: rgb(35, 155, 155);
+}
+
+#tag2 {
+  background-color: rgb(179, 26, 77);
+}
+
+#tag3 {
+  background-color: rgb(29, 156, 29);
 }
 
 @media screen and (max-width: 1100px) {
