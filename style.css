@@ -5,7 +5,7 @@
   --background-color: black;
   --link-color: #ffc93c;
   --hover-color: var(--background-color);
-  --hover-bg-color: var(--text-color);
+  --hover-bg-color: var(--link-color);
   --code-color: lime;
 }
 
@@ -60,7 +60,7 @@ h4 {
 ul {
   list-style: none;
   padding: 0em;
-  margin-top: 0em;
+  margin: 0em 0em 0.5em 0em;
 }
 
 ul li:before
