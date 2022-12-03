@@ -1,22 +1,33 @@
 const postBoxes = document.getElementsByClassName("post-box")
+let tagArray = []
 
 for (postBox of postBoxes) {
-    grabChildNodes(postBox)
+    appendTagsToBarAndPost(postBox)
 }
 
-function grabChildNodes(postBox) {
-    const childNodesArray = Array.from(postBox.childNodes[3].childNodes[3].childNodes)
+function appendTagsToBarAndPost(postBox) {
+    // get array of tag names from class name
+    const postBoxClassName = postBox.attributes.class.value
+    const individualTags = postBoxClassName.split(" ").slice(1)
     const tagBar = document.querySelector(".tag-bar")
     
-    // console.log(tagBar)
-    
-    childNodesArray.forEach(node => {
-        const nodeCopy = document.createElement("span")
-        if (childNodesArray.indexOf(node) % 2 === 1) {
-            nodeCopy.textContent = node.textContent
-            nodeCopy.id = node.id
-            nodeCopy.className = node.className
-            tagBar.append(nodeCopy)
+    individualTags.forEach(tagText => {
+        const barTag = document.createElement("span")
+        const postTag = document.createElement("span")
+        const postTagDiv = postBox.children[1].children[1]
+
+        barTag.textContent = tagText
+        barTag.className = "tag"
+
+        postTag.textContent = tagText
+        postTag.className = "tag"
+        
+        if (!tagArray.includes(tagText)) {
+            tagArray.push(tagText)
+            tagBar.append(barTag)
         }
+        
+        postTagDiv.append(postTag)
     })
 }
+
