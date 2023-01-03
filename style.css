@@ -46,7 +46,7 @@ p {
 }
 
 h2 {
-  margin: 0em 0em 1.5em 0em;
+  margin: 0em 0em 0.5em 0em;
 }
 
 h3 {
@@ -63,11 +63,11 @@ ul {
   margin: 0em 0em 0.5em 0em;
 }
 
-ul li:before
+/* ul li:before
 {
   content: '\27F6';
   margin: 0 0.2em 0 0;
-}
+} */
 
 
 .header {
