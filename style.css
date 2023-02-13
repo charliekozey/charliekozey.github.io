@@ -20,6 +20,7 @@ body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 0 2em;
   font-size: 20pt;
+  line-height: 2em;
   margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
