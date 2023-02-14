@@ -20,7 +20,7 @@ body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 0 2em;
   font-size: 20pt;
-  line-height: 2em;
+  line-height: 1.4em;
   margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -34,7 +34,13 @@ code {
   background-color: #000000;
   color: var(--code-color);
   padding: 1px;
-  }
+}
+
+img {
+  width: 400px;
+  height: auto;
+  max-width: 92vw;
+}
   
 h1 {
   font-size: 2em;
@@ -158,6 +164,10 @@ a:active {
   /* background-color: #ffc93c; */
 }
 
+.paragraph {
+  max-width: 700px;
+}
+
 .tag-bar {
   width: 20%;
   /* background-color: aqua; */
@@ -174,6 +184,8 @@ a:active {
 
 #home-main {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .tag {
@@ -199,7 +211,7 @@ a:active {
   background-color: rgb(214, 153, 30);
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
 
   body {
     padding: 0em 1em;
@@ -229,6 +241,10 @@ a:active {
   .tag-bar {
     width: 100%;
     text-align: left;
+  }
+
+  #home-main {
+    flex-direction: column;
   }
 
   #img-box {
