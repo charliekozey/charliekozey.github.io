@@ -1,8 +1,8 @@
 /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
 
 :root {
-  --text-color: white;
-  --background-color: black;
+  --text-color: rgb(235, 235, 235);
+  --background-color: rgb(3, 3, 3);
   --link-color: #ffc93c;
   --hover-color: var(--background-color);
   --hover-bg-color: var(--link-color);
@@ -18,14 +18,12 @@
 
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
-  padding: 0 2em;
-  font-size: 20pt;
-  line-height: 1.4em;
+  padding: 1em 2em;
+  font-size: 18pt;
   margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
   color: var(--text-color);
-  max-width: 1600px;
 }
 
 code {
@@ -43,39 +41,65 @@ img {
 }
   
 h1 {
-  font-size: 2em;
-  line-height: 1em;
-  margin: 0em;
-}
-
-p {
-  margin: 0em 0em 0.5em 0em;
+  margin: 0;
 }
 
 h2 {
-  margin: 1em 0em 0.5em 0em;
+  margin: 1.3em 0 0 0;
 }
 
 h3 {
-  margin-top: 0em;
+  margin: 0.7em 0 0 0;
 }
 
 h4 {
-  margin-top: 0em;
+  margin: 0.7em 0 0 0;
+}
+
+h5 {
+  margin: 0.3em 0 0 0;
+}
+
+p {
+  margin: 0.5em 0em 0.5em 0em;
+  line-height: 1.4em;
+}
+
+li {
+  line-height: 1.2em;
+  padding-top: 0.5em;
 }
 
 ul {
   list-style: none;
-  padding: 0em;
-  margin: 0em 0em 0.5em 0em;
+  padding: 0 0 0 2em;
 }
 
-/* ul li:before
+ul li:before
 {
   content: '\27F6';
   margin: 0 0.2em 0 0;
-} */
+}
 
+.resume-body {
+  max-width: 40em;
+}
+
+.info {
+  color: #c5c5c5;
+}
+
+.employer-title {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-location {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
 
 .header {
   max-width: 2400px;
@@ -139,9 +163,11 @@ a:active {
 
 .post-tags {
   text-align: left;
-  padding-left: 1.5em;
+  padding: 0em 0.5em;
   font-size: 0.8em;
   align-items: top;
+  white-space: pre;
+  background-color: #878787;
 }
 
 .skill-icon {
@@ -214,7 +240,8 @@ a:active {
 @media screen and (max-width: 1200px) {
 
   body {
-    padding: 0em 1em;
+    padding: 1em 2em;
+
   }
   .header {
     flex-direction: column;
@@ -257,7 +284,7 @@ a:active {
 @media screen and (max-width: 850px) {
 
   body {
-    padding: 0em 0.5em;
+    padding: 0.5em 0.8em;
   }
 
   .navbar {
