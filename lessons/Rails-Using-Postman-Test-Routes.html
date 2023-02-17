@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Using Postman to Test Rails Routes</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/night.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown>
+				## Using Postman to Test Rails Routes
+				---
+				## Goals:
+				- Be able to access backend data with GET requests in Postman
+				- Be able to add and change data with POST and PATCH requests
+				- Be able to diagnose and fix common errors
+					- server not running
+					- no route matches "X"
+					- no method error
+				- Be able to organize your Postman requests into collections for easy access
+				---
+				## Review: Rails Routing and Browser Requests
+				- What does a Rails route do? What layer of MVC does it occupy?
+				- Which files are the key players in setting up a Rails route?
+				- How do you set up a route in Rails?
+				- How can you use your browser to test that your server is running and has the correct data?
+				---
+				## Why Postman?
+				- You can use browser to test GET requests (index and show)
+				- But you can't test POST, PATCH, or DELETE requests (create, update, and destroy, respectively) without
+				a functioning front end
+				- Postman is a tool that lets you do that
+				---
+				## Key tips
+				- Configure your request as Body > raw > JSON, like so:
+				![screenshot highlighting the request config options: Body, raw,
+				JSON](assets/postman-request-config.jpg)
+				---
+				## Key tips
+				- Save your requests to access them later
+				- Collections > New Collection > Add Request
+				![screenshot highlighting the steps to create a new Postman
+				request](assets/postman-organize-requests.jpg)
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
