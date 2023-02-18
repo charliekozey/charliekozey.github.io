@@ -84,11 +84,11 @@ ul li:before
 
 .resume-section {
   color: var(--background-color);
-  background-color: var(--text-color);
+  background-color: #c5c5c5;
 }
 
 .resume-body {
-  max-width: 40em;
+  max-width: 50em;
 }
 
 .info {
