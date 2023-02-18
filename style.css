@@ -82,6 +82,11 @@ ul li:before
   margin: 0 0.2em 0 0;
 }
 
+.resume-section {
+  color: var(--background-color);
+  background-color: var(--text-color);
+}
+
 .resume-body {
   max-width: 40em;
 }
