@@ -368,9 +368,13 @@ a:active {
   .post-tags {
     padding: 0em;
   }
-
   .tag-bar {
     width: 100%;
     text-align: left;
+  }
+
+  #home-photo {
+    padding: 2em;
+    width: 60%;
   }
 }
