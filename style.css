@@ -205,6 +205,7 @@ a:active {
 .skill-icon {
   margin-right: 0.2em;
   font-size: 1.8em;
+  background-color: ;
 }
 
 .body-container {
@@ -244,6 +245,10 @@ a:active {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+#home-photo {
+  padding: 2em;
 }
 
 .tag {
