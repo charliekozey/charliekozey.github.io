@@ -1,9 +1,22 @@
 /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
 
+/* black and yellow
 :root {
   --text-color: rgb(235, 235, 235);
   --background-color: rgb(3, 3, 3);
   --link-color: #ffc93c;
+  --hover-color: var(--background-color);
+  --hover-bg-color: var(--link-color);
+  --code-color: lime;
+} */
+
+/* blue and white */
+:root {
+  --text-color: rgb(3, 3, 3);
+  --secondary-text-color: rgb(60, 60, 60);
+  --background-color: white;
+  --link-color: #3c4fff;
+  --tag-background-color: rgb(180, 180, 210);
   --hover-color: var(--background-color);
   --hover-bg-color: var(--link-color);
   --code-color: lime;
@@ -61,7 +74,7 @@ h5 {
 }
 
 p {
-  margin: 0.5em 0em 0em 0em;
+  margin: 0.5em 0em 0.3em 0em;
   line-height: 1.4em;
 }
 
@@ -240,6 +253,12 @@ a:active {
   cursor: pointer;
 }
 
+#fridge {
+  width: 700px;
+  height: auto;
+  padding: 1em 0;
+}
+
 #tag1 {
   background-color: rgb(35, 155, 155);
 }
@@ -281,7 +300,7 @@ a:active {
   }
   
   .main {
-    width: 80%;
+    width: 50em;
   }
 
   .tag-bar {
