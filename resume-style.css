@@ -3,7 +3,7 @@
 :root {
   --text-color: rgb(3, 3, 3);
   --secondary-text-color: rgb(60, 60, 60);
-  --background-color: white;
+  --background-color: rgb(244, 244, 244);
   --link-color: #3c4fff;
   --tag-background-color: rgb(180, 180, 210);
   --hover-color: var(--background-color);
@@ -223,6 +223,11 @@ a:active {
   line-height: 1em;
   margin-top: 1em;
   /* background-color: palegreen; */
+}
+
+a.current-page-link {
+  color: var(--background-color);
+  background-color: var(--link-color);
 }
 
 #home-main {
