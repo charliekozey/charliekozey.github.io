@@ -21,7 +21,7 @@
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 1em 2em;
-  font-size: 14pt;
+  font-size: 10pt;
   margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -336,10 +336,6 @@ a:active {
   }
 
   .post-date {
-    padding: 0em;
-  }
-  
-  .post-tags {
     padding: 0em;
   }
 
