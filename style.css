@@ -1,9 +1,22 @@
 /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
 
+/* black and yellow
 :root {
   --text-color: rgb(235, 235, 235);
   --background-color: rgb(3, 3, 3);
   --link-color: #ffc93c;
+  --hover-color: var(--background-color);
+  --hover-bg-color: var(--link-color);
+  --code-color: lime;
+} */
+
+/* blue and white */
+:root {
+  --text-color: rgb(3, 3, 3);
+  --secondary-text-color: rgb(60, 60, 60);
+  --background-color: rgb(244, 244, 244);
+  --link-color: #3c4fff;
+  --tag-background-color: rgb(180, 180, 210);
   --hover-color: var(--background-color);
   --hover-bg-color: var(--link-color);
   --code-color: lime;
@@ -19,7 +32,7 @@
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 1em 2em;
-  font-size: 16pt;
+  font-size: 1.2rem;
   margin: 0em;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -61,7 +74,7 @@ h5 {
 }
 
 p {
-  margin: 0.5em 0em 0em 0em;
+  margin: 0.5em 0em 0.3em 0em;
   line-height: 1.4em;
 }
 
@@ -192,6 +205,7 @@ a:active {
 .skill-icon {
   margin-right: 0.2em;
   font-size: 1.8em;
+  background-color: ;
 }
 
 .body-container {
@@ -233,11 +247,23 @@ a:active {
   justify-content: space-around;
 }
 
+#home-photo {
+  padding: 2em;
+}
+
 .tag {
   margin-right: 0.4em;
   font-size: 0.8em;
   padding: 0em 0.2em;
   cursor: pointer;
+}
+
+
+
+#fridge {
+  width: 700px;
+  height: auto;
+  padding: 1em 0;
 }
 
 #tag1 {
@@ -281,7 +307,7 @@ a:active {
   }
   
   .main {
-    width: 80%;
+    width: 50em;
   }
 
   .tag-bar {
@@ -344,9 +370,13 @@ a:active {
   .post-tags {
     padding: 0em;
   }
-
   .tag-bar {
     width: 100%;
     text-align: left;
+  }
+
+  #home-photo {
+    padding: 2em;
+    width: 60%;
   }
 }
