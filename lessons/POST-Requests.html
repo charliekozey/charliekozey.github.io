@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>POST Requests</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/night.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section 
+        data-markdown 
+        data-separator="---"
+        data-separator-vertical="-o-o-o-" 
+        data-separator-notes="Note:">
+        # POST Requests
+        Note:
+        ---
+        # Goals
+        - Define JSON, and explain the process of serialization (in other words, jsonifying/stringifying) and why it's necessary
+        - Send a POST request using HTML forms and JavaScript
+        - Explain the difference between optimistic and pessimistic rendering
+        ---
+        # Part 1: JSON
+        ---
+        ## JSON is
+        - **J**ava**S**cript **O**bject **N**otation
+        - Transmission and storage format
+        - Designed to LOOK like a JavaScript object for easy conversion and readability
+        - Can be converted to and from other languages, not just JS
+        - When you build fullstack apps in phase 3 and 4, you'll still use JSON as a way to transmit data; you'll just be building the API yourself!
+        ---
+        ## Why JSON?
+        ---
+        ### Strings vs. Objects
+        Strings
+        - primitive datatype
+        - harder to manipulate
+        - easier to send
+        - lightweight
+        ---
+        ### Strings vs. Objects
+        Objects
+        - non-primitive
+        - conveniently manipulable with dot notation, iteration
+        - harder to send
+        - heavier
+        ---
+        ## Transmitting JSON
+        - Process is called serialization
+        - Data is stored and manipulated on the server in some language: can be Python, Ruby, etc
+        - When we request data with GET, server sends stringified JSON to client
+        ---
+        - Client parses the JSON string into a JS object or array of objects  
+        - We work with data as JS objects/arrays
+        - We send data to server as stringified JSON when we POST or PATCH
+        - QQ: What kind of REST endpoint gives us an object? What kind of endpoint gives us an array of objects?
+        ---
+        ## JSON analogy
+        - Like a tin-can telephone string
+          - Sound vibrations in air hit tin can bottom --> JSON.stringify()
+          - Information transformed into vibrations in string
+          - String vibrations hit the other tin can bottom --> response.JSON() (aka "parsing" the string as JSON)
+        ---
+        ## What stringifying does
+        ```js
+        JSON.stringify({name: "Beelzebub"})
+        // '{"name": "Beelzebub"}'
+        ```
+        - the string is always wrapped in single quotes
+        - the keys and values must be in double quotes
+        ---
+        ## Storing JSON
+        - db.json
+        ---
+        # Part 2: POST Requests
+        ---
+        ## Context: CRUD and HTTP Verbs
+        - CRUD is the essence of web apps
+        - Today we'll talk POST, tomorrow PATCH and DELETE
+        - (crud action --> HTTP verb)
+        - create --> POST
+        - read --> GET
+        - update --> PATCH
+        - delete --> DELETE
+        ---
+        ## Requires three things:
+        1. a URL to fetch from
+        2. a configuration object
+        3. information to send!
+        - in the form of an object
+        ---
+        ## Anatomy of a POST Request: 3 ways
+
+        1. No generalization
+
+        2. Config object saved as variable
+
+        3. Both config object and form data saved as variable
+        ---
+        ## Headers
+        "Content-Type" 
+        - Specifies the format of data you're *sending* to the API
+        - Requires double quotes because of the special character (hyphen)
+        ---
+        "Accept"
+        - Specifies the format of data you want to *receive* from API
+        - You'll see it and use it in the future because some APIs can return multiple types of data: JSON, XML, HTML
+        - So in those cases you'll need to specify
+        - But not json-server, it only returns JSON
+        - So you can leave off the "Accept" key-value pair when using json-server
+        ---
+        ## Part 3: Optimistic vs. Pessimistic Rendering
+        ---
+        - Will the server update be successful?
+        - Optimist says yes
+        - Pessimist waits to be sure
+        - Not necessarily better or worse; just depends on use case
+        ---
+        ![[optimistic vs pessimistic rendering]](assets/optimistic-vs-pessimistic-rendering.drawio.svg)
+        ---
+        ## Optimistic rendering
+        - Optimistic rendering renders DOM and updates server simultaneously
+        - DOM updates are synchronous, so they happen first
+        - Server update is async, so it happens last
+        ```js
+        fetch(url, bookData)
+        renderBook(bookData)
+        ```
+        ---
+        - Better if you expect users to have reliable but slow connections (makes UI more responsive; updates DOM first and server update runs in background)
+        - Caveat: you must be more thorough with error handling because DOM update may trick your users into thinking it worked
+        ---
+        ## Pessimistic rendering
+        - Pessimistic rendering updates server, waits for it to complete, then renders DOM
+        ```js
+        fetch(url, bookData)
+          .then(res => res.json())
+          .then(renderBook)
+        ```
+        ---
+        - Better if you expect users to have fast connections; simpler to execute
+        - You could also write the second ```.then``` as ```.then(book => renderBook(book))```
+        - QQ, why does it still work in the more streamlined way it is written above?
+        - Recommend pessimistic for Phase 1, because it's simpler to debug
+        <!-- ---
+        ## Breaking repetitive code into functions
+        
+        ```js
+        function getJSON(url) {
+          return fetch(url)
+          .then(response => {
+            if (response.ok) {
+                return response.json()
+              } else {
+                throw (response.statusText)
+              }
+            })
+        }
+        
+        function postJSON(url, data) {
+          return fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          })
+            .then(response => {
+              if (response.ok) {
+              return response.json()
+              } else {
+              throw (response.statusText)
+            }
+            }
+          })
+        }
+        ``` -->
+        ---
+        # Goals
+        It's the end of the lecture! Are you able to...?
+        - Send a POST request using HTML forms and JavaScript
+        - Explain the difference between optimistic and pessimistic rendering
+        - Define JSON, and explain the process of serialization (in other words, jsonifying/stringifying) and why it's necessary
+      </section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
