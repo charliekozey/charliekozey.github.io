@@ -205,21 +205,25 @@ a:active {
 .skill-icon {
   margin-right: 0.2em;
   font-size: 1.8em;
-  background-color: ;
+  /* background-color: white; */
 }
 
-.body-container {
+/* .body-container {
   display: flex;
-}
+} */
 
 .subnav {
-  /* background-color: palevioletred; */
+  background-color: var(--background-color);
   width: 20%;
   font-size: 1.2em;
+  position: sticky;
+  top: 0;
+  padding: 1em 0;
 }
 
 .main {
   width: 60%;
+  position: inline;
   /* background-color: #ffc93c; */
 }
 
@@ -293,9 +297,9 @@ a:active {
     align-items: flex-start;
   }
 
-  .body-container {
+  /* .body-container {
     flex-direction: column;
-  }
+  } */
 
   .navbar{
     margin: 1em 0em 0em 0em;
@@ -345,9 +349,9 @@ a:active {
     margin-bottom: 1.5em;
   }
 
-  .body-container {
+  /* .body-container {
     flex-direction: column;
-  }
+  } */
 
   .main {
     width: 100%;
