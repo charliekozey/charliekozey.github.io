@@ -29,6 +29,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-padding-top: 10em;
+}
+
 body {
   font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
   padding: 1em 2em;
@@ -52,7 +56,7 @@ img {
   height: auto;
   max-width: 92vw;
 }
-  
+
 h1 {
   margin: 0;
 }
@@ -214,7 +218,7 @@ a:active {
 
 .subnav {
   background-color: var(--background-color);
-  width: 20%;
+  width: 100%;
   font-size: 1.2em;
   position: sticky;
   top: 0;
@@ -309,7 +313,7 @@ a:active {
     width: 100%;
     margin-bottom: 1.5em;
   }
-  
+
   .main {
     width: 50em;
   }
@@ -346,6 +350,7 @@ a:active {
   }
 
   .subnav {
+    width: 100%;
     margin-bottom: 1.5em;
   }
 
@@ -370,7 +375,7 @@ a:active {
   .post-date {
     padding: 0em;
   }
-  
+
   .post-tags {
     padding: 0em;
   }
