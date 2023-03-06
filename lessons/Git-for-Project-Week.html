@@ -23,10 +23,10 @@
         data-separator="---"
         data-separator-vertical="-o-o-o-"
         data-separator-notes="Note:">
-          # GitHub for First Project Week
+          ## GitHub for First Project Week
 
           ---
-          ## Goals:
+          ### Goals:
           Be able to...
           - Create a git repository and a GitHub repository (and know the difference!)
           - Add collaborators to your repo
@@ -36,14 +36,14 @@
           - Resolve merge conflicts
 
           ---
-          ## Remember!
+          ### Remember!
           - merge conflicts will happen
           - confusion will happen
           - it's all part of the process
           - fear not!
 
           ---
-          ## Creating a repository
+          ### Creating a repository
           Option One: starting from local
           - get github command line interface
           - create repository from the terminal
@@ -67,36 +67,46 @@
           ![github-repo-collaborators.png](assets/github-repo-collaborators.png)
 
           ---
-          ## Orienting yourself
+          ### Orienting yourself
 
           - ```git status``` shows current branch and recent changed files
           - ```git log``` shows past commits
           - ```git diff``` shows difference between present state and staged files
 
           ---
-          ## Orienting yourself, continued
+          ### Orienting yourself, continued
           - highly recommended: use [oh-my-zsh](https://ohmyz.sh/)
           ![one-stashed-one-unstaged.png](assets/one-stashed-one-unstaged.png)
           ![one-stashed-one-staged.png](assets/one-stashed-one-staged.png)
 
           ---
-          ## No pushing to main
+          ### No pushing to main
 
           Repeat after me: I WILL NOT PUSH TO MAIN
+
+          (ok, I'm overstating it a little)
 
           ![bart-will-not-git-push-main.png](assets/bart-will-not-git-push-main.png)
 
           ---
-          ## Pull requests
+          ### Pull requests
           - On open-source projects and in your future jobs, your PRs will need approval from project leaders
           - In the case of your projects, you're playing the role of submitter AND approver
 
           ---
-          ## GitHub Collaboration Flow:
+          ### GitHub Collaboration Flow:
 
           [More details on GitHub docs](https://docs.github.com/en/get-started/quickstart/github-flow)
 
           ![github-flow-diagram.png](assets/github-flow-diagram.png)
+
+          ---
+          #### Context: Trunk-based development
+          - one main branch
+          - lots of small, short-lived feature branches
+          ![trunk-based development diagram](assets/trunk-based-dev-diagram.png)
+
+          [Further reading here](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
 
           ---
           Once you've created or cloned your project repo...
@@ -148,12 +158,12 @@
           > [Atlassian Merge Conflicts Resource](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
           ---
-          Step 12. This branch has done its job. You can delete it, or keep your branch as a record of what you've built so far. I recommend keeping it. Just don't re-use it, that will probably cause headaches.
+          Step 12. This branch has done its job. You can delete it, or keep your branch as a record of what you've built so far. Just don't re-use it, that will probably cause headaches.
 
           Step 13. Start back at 1 and build a new feature (or improve an existing one)!
 
           ---
-          ## Once again
+          ### Once again
           - merge conflicts will happen
           - confusion will happen
           - it's all part of the process
