@@ -1,3 +1,4 @@
 .vscode
 CHANGELOG.MD
 node_modules
+.DS_Store

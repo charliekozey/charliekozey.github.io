@@ -41,6 +41,7 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   color: var(--text-color);
+  max-width: 1200px;
 }
 
 code {
@@ -252,7 +253,8 @@ a:active {
 #home-main {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+  padding-bottom: 2em;
 }
 
 #home-photo {
