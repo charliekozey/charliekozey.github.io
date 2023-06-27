@@ -1,17 +1,17 @@
 /* background: linear-gradient(120deg, #96e6a1 0%, #d4fc79 100%); */
 
-/* black and yellow
+/* black and yellow */
 :root {
-  --text-color: rgb(235, 235, 235);
-  --background-color: rgb(3, 3, 3);
+  --text-color: rgb(210, 235, 235);
+  --background-color: rgb(10, 10, 10);
   --link-color: #ffc93c;
   --hover-color: var(--background-color);
   --hover-bg-color: var(--link-color);
   --code-color: lime;
-} */
+}
 
 /* blue and white */
-:root {
+/* :root {
   --text-color: rgb(3, 3, 3);
   --secondary-text-color: rgb(60, 60, 60);
   --background-color: rgb(244, 244, 244);
@@ -20,7 +20,7 @@
   --hover-color: var(--background-color);
   --hover-bg-color: var(--link-color);
   --code-color: lime;
-}
+} */
 
 @font-face {
   font-family: 'AtkinsonHyperlegible';
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  font-family: 'AtkinsonHyperlegible', 'Andale Mono', monospace;
+  font-family: 'Andale Mono', monospace;
   padding: 1em 2em;
   font-size: 1.2rem;
   margin: 0em;
