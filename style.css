@@ -108,6 +108,11 @@ ul li:before
   margin: 0 0.2em 0 0;
 }
 
+figcaption {
+  color: lightslategray;
+  font-size: 0.8em;
+}
+
 /* .resume-section {
   color: var(--background-color);
   background-color: var(--text-color);
