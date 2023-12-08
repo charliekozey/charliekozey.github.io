@@ -146,7 +146,7 @@ a:active {
 }
 
 .footer {
-  text-align: right;
+  /* text-align: right; */
   color: #878787;
   line-height: 1em;
   margin-top: 1em;
