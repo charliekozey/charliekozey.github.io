@@ -8,7 +8,12 @@ jobs:
     runs-on: macos-12
     steps:
     - uses: actions/checkout@v3
-
+    - uses: actions/setup-python@v1
+    - uses: BSFishy/pip-action@v1
+      with:
+        packages:
+          commonmark==0.9.1
+            
     - name: Build site
       run: make site
 
