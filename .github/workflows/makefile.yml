@@ -5,9 +5,7 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-12
-
     steps:
     - uses: actions/checkout@v3
 
@@ -16,7 +14,18 @@ jobs:
 
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v3.0.0
-            
-    - name: Deploy GitHub Pages site
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-12
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
       uses: actions/deploy-pages@v4.0.2
-            
+              
