@@ -11,8 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: make
-
-    - name: Build static pages
-      run: make serve
+    - name: Build site
+      run: make site
