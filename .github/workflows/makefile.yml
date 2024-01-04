@@ -1,0 +1,29 @@
+name: Makefile CI
+
+on:
+  push:
+  schedule:
+    - cron:  '12 3,17 * * *'
+
+jobs:
+  build:
+
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: configure
+      run: ./configure
+
+    - name: Install dependencies
+      run: make
+
+    - name: Run check
+      run: make check
+
+    - name: Run distcheck
+      run: make distcheck
+
+    - name: Build static pages
+      run: make serve
