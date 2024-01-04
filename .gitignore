@@ -1,4 +1,10 @@
-.vscode
-CHANGELOG.MD
-node_modules
+_site
+drafts
+*.pyc
+__pycache__
+.coverage
+htmlcov
+*.sw?
 .DS_Store
+venv
+auto_restart.sh

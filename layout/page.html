@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - {{ subtitle }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/light.css">
+</head>
+
+<body id="{{ slug }}">
+
+<nav>
+<section>
+    <div class="home">
+        Charlie Kozey
+    </div>
+    <br>
+    <div class="links">
+        <a href="{{ base_path }}/writing/" class="blog">Writing</a> |
+        <a href="{{ base_path }}/pages/projects/" class="news">Projects</a> |
+        <a href="{{ base_path }}/log/" class="contact">Log</a> |
+        <a href="{{ base_path }}/pages/about/" class="about">About</a>
+    </div>
+</section>
+</nav>
+
+<hr>
+
+<main>
+{{ content }}
+</main>
+
+<footer>
+<section>
+<!-- <p>&copy; {{ current_year }} Lorem Ipsum</p> -->
+<hr></hr>
+<p>
+    Contact me:
+    <a href="mailto:kozey@mailbox.org">Email</a> |
+    <a href="https://github.com/charliekozey">GitHub</a> |
+    <a href="https://www.linkedin.com/in/charlie-kozey-887b4823b/">LinkedIn</a>
+</p>
+</section>
+</footer>
+
+</body>
+</html>

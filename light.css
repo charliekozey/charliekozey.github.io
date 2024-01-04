@@ -1,0 +1,10 @@
+body {
+    max-width: 40rem; 
+    font-size: larger;
+    font-family: 'Lucida Console', monospace;
+    padding: 2rem;
+}
+
+a {
+    color: #4b8e9a;
+}
