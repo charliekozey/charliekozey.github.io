@@ -1,5 +1,4 @@
 <!-- title: Fixed: Configuring Flask to store session cookie-->
-<!-- summary: Note to self: sometimes error messages are hidden in tooltips. -->
 
 The Win: 
 - Got session cookie to save in browser during login function

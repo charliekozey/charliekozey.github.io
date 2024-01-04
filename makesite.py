@@ -154,7 +154,7 @@ def make_list(posts, dst, list_layout, item_layout, **params):
     items = []
     for post in posts:
         item_params = dict(params, **post)
-        item_params['summary'] = truncate(post['content'])
+        # item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
 

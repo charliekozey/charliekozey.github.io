@@ -8,4 +8,3 @@ htmlcov
 .DS_Store
 venv
 auto_restart.sh
-.vscode/
