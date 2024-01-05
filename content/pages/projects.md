@@ -11,4 +11,4 @@
 
 ### Other lil things
 
-[tic-tac-toe](https://github.com/charliekozey/ttt) - 2P or 1P terminal (2023, active)
+[tic-tac-toe](https://github.com/charliekozey/tic-tac-toe/blob/main/tic_tac_toe.py) - 2P or 1P terminal (2023, active)
