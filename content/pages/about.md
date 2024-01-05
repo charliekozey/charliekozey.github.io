@@ -11,7 +11,7 @@ Currently:
 * Spending six weeks at the Recurse Center to become a dramatically better programmer
 * Trying to get my first job as a software engineer
 * Making music
-* Trying to keep my houseplants alive
+* Keeping my houseplants alive
 
 The last ten years:
 
