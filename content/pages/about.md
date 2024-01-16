@@ -2,10 +2,10 @@
 
 About me:
 * Born in 1992
+* Living in NYC since 2016
 * Pronouns: they/them
 
 Currently: 
-* Living in NYC
 * Working on Synthia, a social synth
 * Spending six weeks at the [Recurse Center](https://www.recurse.com) to become a dramatically better programmer
 * Trying to get my first job as a software engineer
