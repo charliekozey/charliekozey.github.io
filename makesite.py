@@ -1,9 +1,12 @@
 #!/usr/bin/env python
+ 
+# Forked from makesite.py, by Sunaina Pai
+# github.com/sunainapai/makesite
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2018-2022 Sunaina Pai
-#
+# Copyright (c) 2024 Charlie Kozey
+# 
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
 # "Software"), to deal in the Software without restriction, including
@@ -34,6 +37,7 @@ import glob
 import sys
 import json
 import datetime
+
 
 
 def fread(filename):
@@ -76,8 +80,32 @@ def rfc_2822_format(date_str):
     return d.strftime('%a, %d %b %Y %H:%M:%S +0000')
 
 
+def generate_breadcrumbs(path):
+    """Generate HTML breadcrumb string from file path."""
+    html_string = ""
+    sub_paths = path.split('/')[:-1]
+
+    #Make exception for home page.
+    if "_index" not in path:
+        html_string += "<a href='/'>Home</a> >"
+
+    # Remove content and pages slugs for standalone posts.
+    if 'content' in sub_paths: sub_paths.remove('content')
+    if 'pages' in sub_paths: sub_paths.remove('pages')
+
+    # Alter path for use in href.
+    shortened_path = '/'.join(sub_paths)
+
+    for str in sub_paths:
+        str = str.split('.')[0]
+        html_string += (f' <a href=/{shortened_path}>{str.capitalize()}</a> >')
+
+    return html_string
+
+
 def read_content(filename):
     """Read content and metadata from file into a dictionary."""
+
     # Read file content.
     text = fread(filename)
 
@@ -87,8 +115,15 @@ def read_content(filename):
     content = {
         'date': match.group(1) or '1970-01-01',
         'slug': match.group(2),
+        'breadcrumbs': generate_breadcrumbs(filename)
     }
 
+    # Set date of standalone pages to last modified.
+    if "about.md" in filename or "projects.md" in filename:
+        epoch_modified =  os.path.getmtime(filename)
+        date_modified = datetime.datetime.utcfromtimestamp(epoch_modified).strftime("%Y-%m-%d")
+        content['date'] = (date_modified)
+    
     # Read headers.
     end = 0
     for key, val, end in read_headers(text):
@@ -151,12 +186,20 @@ def make_pages(src, dst, layout, **params):
 
 def make_list(posts, dst, list_layout, item_layout, **params):
     """Generate list page for a blog."""
+
     items = []
     for post in posts:
         item_params = dict(params, **post)
         # item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
+
+    # Assign breadcrumbs.
+    # Remove first and last two elements of dst.
+    # "_site" and endpoint already covered.
+    shortened_dst = ''.join(dst.split('/')[1:-2])
+
+    params['breadcrumbs'] = generate_breadcrumbs(shortened_dst)
 
     params['content'] = ''.join(items)
     dst_path = render(dst, **params)
@@ -178,7 +221,8 @@ def main():
         'subtitle': 'Charlie',
         'author': 'Charlie',
         'site_url': 'http://localhost:8000',
-        'current_year': datetime.datetime.now().year
+        'current_year': datetime.datetime.now().year,
+        'breadcrumbs': ''
     }
 
     # If params.json exists, load it.

@@ -1,10 +1,15 @@
 body {
     max-width: 40rem; 
     font-size: larger;
-    font-family: 'Lucida Console', monospace;
+    font-family: 'Menlo', 'Lucida Console';
     padding: 2rem;
 }
 
 a {
     color: #4b8e9a;
+}
+
+.breadcrumbs {
+    font-size: smaller;
+    font-style: oblique;
 }
