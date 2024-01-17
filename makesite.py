@@ -263,9 +263,12 @@ def main():
 
     # Create blog list pages.
     make_list(writing_posts, '_site/writing/index.html',
-              list_layout, item_layout, blog='writing', title='Writing', blurb="A place for slightly more developed thoughts.", **params)
+              list_layout, item_layout, blog='writing', 
+              title='Writing', blurb="A place for slightly more developed thoughts.", 
+              **params)
     make_list(log_posts, '_site/log/index.html',
-              list_layout, item_layout, blog='log', title='Log', blurb="Mainly notes to self.", **params)
+              list_layout, item_layout, blog='log', 
+              title='Log', blurb="Public notes-to-self.", **params)
 
     # Create RSS feeds.
     # make_list(writing_posts, '_site/writing/rss.xml',
