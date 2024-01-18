@@ -105,8 +105,8 @@ footer a:last-child {
 
 /* Posts */
 article {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 article h2 a:link, article h2 a:visited,

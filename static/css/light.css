@@ -13,3 +13,7 @@ a {
     font-size: smaller;
     font-style: oblique;
 }
+
+.list-item {
+    padding-bottom: 0.7em;
+}

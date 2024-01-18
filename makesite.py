@@ -115,14 +115,19 @@ def read_content(filename):
     content = {
         'date': match.group(1) or '1970-01-01',
         'slug': match.group(2),
-        'breadcrumbs': generate_breadcrumbs(filename)
+        'breadcrumbs': generate_breadcrumbs(filename),
+        'dated': True
     }
 
     # Set date of standalone pages to last modified.
-    if "about.md" in filename or "projects.md" in filename:
+    if "/about.md" in filename or "/projects.md" in filename:
         epoch_modified =  os.path.getmtime(filename)
         date_modified = datetime.datetime.utcfromtimestamp(epoch_modified).strftime("%Y-%m-%d")
         content['date'] = (date_modified)
+
+    # Set item type to dated or undated.
+    if "/log/" in filename or "/projects/" in filename:
+        content['dated'] = False
     
     # Read headers.
     end = 0
@@ -218,7 +223,7 @@ def main():
     # Default parameters.
     params = {
         'base_path': '',
-        'subtitle': 'Charlie',
+        'subtitle': 'Charlie 🌱 ',
         'author': 'Charlie',
         'site_url': 'http://localhost:8000',
         'current_year': datetime.datetime.now().year,
@@ -234,6 +239,7 @@ def main():
     post_layout = fread('layout/post.html')
     list_layout = fread('layout/list.html')
     item_layout = fread('layout/item.html')
+    undated_item_layout = fread('layout/undated_item.html')
     feed_xml = fread('layout/feed.xml')
     item_xml = fread('layout/item.xml')
 
@@ -247,7 +253,7 @@ def main():
     make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
                page_layout, **params)
 
-    # Create blogs and pages.
+    # Create individual pages.
     # There is one blog for longer posts (writing) and one for
     # quick informal notes (dev log).
     # Individual pages like About and Projects are just standalone posts.
@@ -260,8 +266,11 @@ def main():
     pages = make_pages('content/pages/*.md',
                             '_site/pages/{{ slug }}/index.html',
                             post_layout, **params)
+    lists = make_pages('content/lists/*.md',
+                            '_site/lists/{{ slug }}/index.html',
+                            post_layout, **params)
 
-    # Create blog list pages.
+    # Create list pages.
     make_list(writing_posts, '_site/writing/index.html',
               list_layout, item_layout, blog='writing', 
               title='Writing', blurb="A place for slightly more developed thoughts.", 
@@ -269,6 +278,9 @@ def main():
     make_list(log_posts, '_site/log/index.html',
               list_layout, item_layout, blog='log', 
               title='Log', blurb="Public notes-to-self.", **params)
+    make_list(lists, '_site/lists/index.html',
+            list_layout, undated_item_layout, blog='lists', 
+            title='Lists', blurb="For fun, mostly.", **params)
 
     # Create RSS feeds.
     # make_list(writing_posts, '_site/writing/rss.xml',

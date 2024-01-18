@@ -19,4 +19,5 @@ Random interesting things I took away from them:
   - Elevation tracker: best not to use phone position (too inaccurate), rather use lat and long to lookup on elevation table — lots of cool libraries for this. (Julian)
 
 Worked some more on containerizing Synthia.
+
    - A victory of focus: was tempted to completely overhaul the project's file structure, but I resisted. 💪🏻
