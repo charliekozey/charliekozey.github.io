@@ -1,6 +1,4 @@
-<!-- RC Week 4 Day 1: Mon Jan 22 2024 -->
-
-## Mon Jan 21 2024 (RC W4 Mon)
+<!-- title: Recurse Center Week 4: Monday Jan 22 -->
 
 Easing back into things today—have been feeling pretty stuck lately and just getting the wheels moving again.
 
