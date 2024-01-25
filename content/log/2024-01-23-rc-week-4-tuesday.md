@@ -1,4 +1,4 @@
-<!-- title: Recurse Center Week 4: Tuesday Jan 23 -->
+<!-- title: Recurse Center Week 4: Tue Jan 23 -->
 
 Today's goal areas were exploring the open source world, connecting with people, and leetcoding.
 
