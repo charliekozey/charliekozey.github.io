@@ -1,4 +1,4 @@
-<!-- title: Recurse Center Week 4: Monday Jan 22 -->
+<!-- title: Recurse Center Week 4: Mon Jan 22 -->
 
 Easing back into things today—have been feeling pretty stuck lately and just getting the wheels moving again.
 

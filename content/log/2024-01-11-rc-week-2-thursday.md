@@ -1,4 +1,4 @@
-<!-- title: Recurse Center Week 2: Thursday Jan 11 -->
+<!-- title: Recurse Center Week 2: Thu Jan 11 -->
 
 Attended the first presentations of the batch. Learned about a bunch of things I had never heard of!
 

@@ -7,7 +7,7 @@ About me:
 
 Currently: 
 * Working on Synthia, a social synth
-* Spending six weeks at the [Recurse Center](https://www.recurse.com) to become a dramatically better programmer
+* Spending twelve weeks at the [Recurse Center](https://www.recurse.com) to become a better programmer, meet cool people, and learn unexpected things
 * Making music
 * Keeping my houseplants alive
 * Learning in public on this site

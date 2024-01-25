@@ -1,4 +1,4 @@
-<!-- title: Recurse Center Week 3: Wednesday Jan 17 -->
+<!-- title: Recurse Center Week 3: Wed Jan 17 -->
 
 Creative coding
 

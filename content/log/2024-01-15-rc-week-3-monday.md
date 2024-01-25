@@ -1,4 +1,4 @@
-<!-- title: Recurse Center Week 3: Monday Jan 15 -->
+<!-- title: Recurse Center Week 3: Mon Jan 15 -->
 
 Built breadcrumb navigation into my website.
 

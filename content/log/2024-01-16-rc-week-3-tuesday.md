@@ -1,4 +1,4 @@
-<!--title: Recurse Center Week 3: Tuesday Jan 16-->
+<!--title: Recurse Center Week 3: Tue Jan 16-->
 
 Attended [Zack](https://zackscholl.com/)'s SuperCollider workshop on making drones, which was extremely cool.
 

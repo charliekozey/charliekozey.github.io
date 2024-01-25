@@ -1,12 +1,16 @@
 body {
     max-width: 40rem; 
     font-size: larger;
-    font-family: 'Trebuchet MS', 'sans-serif', 'system-ui';
+    font-family: 'Lucida Console', 'Andale Mono', 'monospace';
     padding: 2rem;
 }
 
 a {
-    color: #4b8e9a;
+    color: #4779d4;
+}
+
+a:hover {
+    color: #859ece;
 }
 
 .breadcrumbs {
