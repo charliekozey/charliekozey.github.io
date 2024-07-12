@@ -20,5 +20,3 @@ Sort of a public Read Later where I gather interesting tidbits I learn about dur
 [Genuary](https://genuary.art/prompts) (Reed)
 
 [Ollos](https://alexanderobenauer.com/ollos/) (Felix)
-
-WHY
